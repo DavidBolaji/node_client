@@ -2,6 +2,7 @@ const inputFname = document.querySelector('.fname');
 const inputLname = document.querySelector('.lname');
 const inputAddress = document.querySelector('.address');
 const inputHobbies = document.querySelectorAll('.hobbies');
+const btn = document.getElementById('getdata');
 
 const form = document.querySelector('.form');
 
@@ -36,4 +37,16 @@ form.addEventListener('submit', (e) => {
     })
 
     // console.log(formObj);
+})
+
+btn.addEventListener('click',(e) => {
+    e.preventDefault();
+    // console.log('hello');
+    fetch(`http://localhost:3000`, {
+        method: 'GET'
+    }).then(res => {
+        res.json().then(data => {
+            console.log(data); 
+        })
+    })
 })
