@@ -28,11 +28,11 @@ form.addEventListener('submit', (e) => {
     
 
 
-    fetch(`http://localhost:3000/?fname=${fname}&lname=${lname}&address=${address}&hobbies=${selectArr}`, {
+    fetch(`https://david-form-server.herokuapp.com/?fname=${fname}&lname=${lname}&address=${address}&hobbies=${selectArr}`, {
         method: 'POST'
     }).then(res => {
         res.json().then(data => {
-            console.log(data);
+            alert(data);
         })
     })
 
@@ -42,11 +42,11 @@ form.addEventListener('submit', (e) => {
 btn.addEventListener('click',(e) => {
     e.preventDefault();
     // console.log('hello');
-    fetch(`http://localhost:3000`, {
+    fetch(`https://david-form-server.herokuapp.com`, {
         method: 'GET'
     }).then(res => {
         res.json().then(data => {
-            console.log(data); 
+            alert(data); 
         })
     })
 })
