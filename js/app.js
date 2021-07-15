@@ -32,7 +32,7 @@ form.addEventListener('submit', (e) => {
         method: 'POST'
     }).then(res => {
         res.json().then(data => {
-            alert(data);
+            console.log(data);
         })
     })
 
@@ -46,7 +46,7 @@ btn.addEventListener('click',(e) => {
         method: 'GET'
     }).then(res => {
         res.json().then(data => {
-            alert(data); 
+            console.log(data); 
         })
     })
 })
